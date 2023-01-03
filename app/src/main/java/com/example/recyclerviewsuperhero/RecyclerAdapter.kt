@@ -7,7 +7,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.imageview.ShapeableImageView
 
-class RecyclerAdapter(private val heroList: ArrayList<Heros>) :
+class RecyclerAdapter(private val heroList: ArrayList<Hero>) :
     RecyclerView.Adapter<RecyclerAdapter.MyViewHolder>() {
 
     private lateinit var myListener: onItemClickListener

@@ -15,12 +15,12 @@ class DetailActivity : AppCompatActivity() {
         val imageHeros: ImageView = findViewById(R.id.img_hero_detail)
 
         val bundle: Bundle? = intent.extras
-        val heading = bundle!!.getString("heading")
-        val imgHero = bundle.getInt("imgHero")
-        val heros = bundle.getString("heros")
+        val heading = bundle?.getString("heading")
+        val imgHero = bundle?.getInt("imgHero")
+        val heros = bundle?.getString("heros")
 
         headingHeros.text = heading
         mainHeros.text = heros
-        imageHeros.setImageResource(imgHero)
+        imageHeros.setImageResource(imgHero ?: 0)
     }
 }

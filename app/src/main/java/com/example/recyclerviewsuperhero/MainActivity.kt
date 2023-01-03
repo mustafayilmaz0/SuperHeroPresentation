@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 class MainActivity : AppCompatActivity() {
 
     private lateinit var newRecyclerView: RecyclerView
-    private lateinit var newArrayList: ArrayList<Heros>
+    private lateinit var newArrayList: ArrayList<Hero>
     lateinit var imageId: Array<Int>
     lateinit var heading: Array<String>
     lateinit var heros: Array<String>
@@ -57,14 +57,14 @@ class MainActivity : AppCompatActivity() {
         newRecyclerView = findViewById(R.id.recycler_view)
         newRecyclerView.layoutManager = LinearLayoutManager(this)
         newRecyclerView.setHasFixedSize(true)
-        newArrayList = arrayListOf<Heros>()
+        newArrayList = arrayListOf<Hero>()
         getUserData()
     }
 
     private fun getUserData() {
         for (i in imageId.indices) {
-            val heros = Heros(imageId[i], heading[i])
-            newArrayList.add(heros)
+            val hero = Hero(imageId[i], heading[i])
+            newArrayList.add(hero)
         }
 
         val adapter = RecyclerAdapter(newArrayList)
