@@ -44,6 +44,8 @@
                 android:id="@+id/detail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_4dp"
+                android:layout_marginEnd="@dimen/margin_4dp"
                 android:text="@string/str_aquaman_info" />
 
         </LinearLayout>
